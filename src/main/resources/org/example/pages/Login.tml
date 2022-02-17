@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>login Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="signup/fonts/material-icon/css/material-design-iconic-font.min.css"/>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="signup/css/style.css"/>
+</head>
+<body>
+
+<div class="main">
+
+    <section class="login">
+        <!-- <img src="images/login-bg.jpg" alt=""> -->
+        <div class="container">
+            <div class="signup-content">
+                <t:form t:id="loginForm">
+                    <t:errors/>
+                    <h2 class="form-title">Login</h2>
+                    <div class="form-group">
+                        <t:textfield t:id="username" value="user.username" class="form-input" t:validate="required" placeholder="Username"/>
+                    </div>
+                    <div class="form-group">
+                        <t:textfield t:id="password" value="user.password" class="form-input" placeholder="Password"/>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                   </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="Login"/>
+                    </div>
+                </t:form>
+                <p class="loginhere">
+                    Don't have an account yet ? <a t:type="pagelink" page="${signupPage}" class="loginhere-link">Sign up here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- JS -->
+<script src="signup/vendor/jquery/jquery.min.js"></script>
+<script src="signup/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
